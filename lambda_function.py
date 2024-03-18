@@ -32,7 +32,7 @@ def generate_mock_data():
 
 def lambda_handler(event, context):
     i = 0
-    while (i < 10):
+    while (i < 30):
         sales_order = generate_mock_data()
         print(sales_order)
         sqs_client.send_message(
