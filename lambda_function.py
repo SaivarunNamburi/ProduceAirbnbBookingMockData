@@ -36,7 +36,7 @@ def lambda_handler(event, context):
         sales_order = generate_mock_data()
         print(sales_order)
         sqs_client.send_message(
-            QueueURL = QUEUE_URL,
+            QueueUrl = QUEUE_URL,
             MessageBody = json.dumps(sales_order)
         )
         i += 1
